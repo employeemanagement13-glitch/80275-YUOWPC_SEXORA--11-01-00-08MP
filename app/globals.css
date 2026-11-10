@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #454648;
+  --card-bg: #f6f6f6;
+  --brand-blue: #225e4d;
+  --brand-blue-hover: #1b4d3f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  zoom: 90%;
+}
+
+* {
+  font-family: var(--font-poppins);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 100vw;
+}
+
+.heading {
+  @apply text-4xl md:text-6xl font-medium mb-6 tracking-tight text-[#454648];
+}
+
+.headingpara {
+  @apply text-[19px] text-[#454648]/80 max-w-3xl mx-auto leading-relaxed;
+}
+
+.brightheadingpara {
+  @apply text-[19px] text-[#454648] max-w-3xl mx-auto mb-16 leading-relaxed;
+}
+
+.sectionBackground {
+  @apply w-[80vw] mx-auto py-16 md:py-24 text-[#454648];
+}
+
+.buttonClass {
+  @apply p-3 bg-[#225e4d] cursor-pointer text-[#ffffff] rounded-full shadow-lg transition-colors duration-200 hover:bg-[#1b4d3f] disabled:opacity-50;
+}
+
+.cardBackground {
+  @apply border border-[#f6f6f6] bg-[#f6f6f6];
+}
+
+.heading3 {
+  @apply text-[18px] sm:text-xl md:text-2xl font-medium text-[#454648] mb-4;
+}
+
+.buttonstyles {
+  @apply bg-[#225e4d] hover:bg-[#1b4d3f] text-white font-medium rounded-lg px-4 py-2 cursor-pointer transition-all duration-200 shadow-sm active:scale-[0.98];
+}
+
+.adminSearchbar {
+  @apply w-full mx-auto space-y-6 text-[#454648];
+}
+
+.adminSearchbarParent {
+  @apply flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-[#f6f6f6] border border-[#eaeaea] p-4 rounded-xl shadow-sm;
+}
+
+.searchparent {
+  @apply flex items-center border border-[#eaeaea] px-3.5 py-2.5 rounded-lg w-full sm:w-80 gap-2.5 bg-white focus-within:border-[#225e4d] focus-within:ring-1 focus-within:ring-[#225e4d] transition-all;
+}
+
+.search {
+  @apply outline-none text-[#454648] text-sm w-full bg-transparent placeholder-neutral-400;
+}
